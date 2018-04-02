@@ -19,7 +19,7 @@ export class LoginService {
       responseType:'text' as 'json',
       withCredentials:true
     };
-    return this.httpClient.post<Response>("http://localhost:8080/index",httpParams,httpOptions);
+    return this.httpClient.post<Response>("https://userfront.herokuapp.com/index",httpParams,httpOptions);
   }
   logoutS()
   {
@@ -30,7 +30,7 @@ export class LoginService {
       withCredentials: true,
      };
     
-    return this.httpClient.get<Response>("http://localhost:8080/logout",httpOptions);
+    return this.httpClient.get<Response>("https://userfront.herokuapp.com/logout",httpOptions);
   }
 
 }
