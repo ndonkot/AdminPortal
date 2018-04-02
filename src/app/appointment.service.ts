@@ -9,12 +9,12 @@ export class AppointmentService {
   constructor (private httpClient:HttpClient){}
 
   getAppointmentList():Observable<Appointment[]> {
-    let url = "http://localhost:8080/api/appointment/all";
+    let url = "https://userfront.herokuapp.com/api/appointment/all";
     return this.httpClient.get<Appointment[]>(url, { withCredentials: true });
   }
 
   confirmAppointment(id: number) {
-    let url = "http://localhost:8080/api/appointment/"+id+"/confirm";
+    let url = "https://userfront.herokuapp.com/api/appointment/"+id+"/confirm";
     return this.httpClient.get(url, { withCredentials: true });
   }
 }
